@@ -1,3 +1,7 @@
+#selenium 다운받기
+pip install selenium
+conda install selenium
+
 #네이버 열기
 from selenium import webdriver
 from selenium.webdriver.common.by import By
