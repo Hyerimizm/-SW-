@@ -1,0 +1,19 @@
+#네이버 열기
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
+
+url = "http://naver.com"
+browser = webdriver.Chrome()
+browser.get(url)
+
+#로그인 버튼 찾기
+element = browser.find_element(By.ID, 'query')
+
+#안녕 검색하기
+element.send_keys("안녕")
+
+#엔터치기
+element.send_keys(Keys.ENTER)
+
+'''만약 element가 한개가 아닐땐 find_elements로 쓰면 됨'''
