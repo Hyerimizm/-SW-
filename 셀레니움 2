@@ -1,0 +1,26 @@
+import selenium
+import webdriver_manager
+
+# 셀레니움, 웹드라이버 매니저 잘 깔린건지 확인
+selenium.__version__
+webdriver_manager.__version__
+
+#셀레니움으로 크롤링할 페이지 열기 위한 작업
+from selenium import webdriver
+
+
+url = "https://www.naver.com"
+
+browser = webdriver.Chrome("C:/Users/user/Downloads/chromedriver_win32/chromedriver.exe")
+browser.get(url)
+
+
+element = browser.find_element(By.ID, 'query')
+
+#검색하기
+element.send_keys("검정 운동화")
+
+#엔터치기
+element.send_keys(Keys.ENTER)
+
+time.sleep(3)
